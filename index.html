@@ -18,15 +18,15 @@
 
 </head>
 
-<body>
+<body class="scroll-smooth">
 
     <!------------------------------- header start ----------------------------------->
     <header class="">
         <!-- navbar start -->
-        <nav class="py-2 sm:px-4  rounded bg-gray-200 border-b-2 border-gray-300">
+        <nav class="py-2 sm:px-4  rounded bg-teal-100 border-b-2 border-teal-200">
             <div class="container flex flex-wrap justify-between items-center w-11/12 mx-auto ">
                 <a href="#" class="flex items-center">
-                    <span class="self-center text-3xl font-bold whitespace-nowrap font-['Oswald'] text-teal-600">Today's
+                    <span class="self-center text-3xl font-bold whitespace-nowrap font-['Oswald'] text-teal-700">Today's
                         Truth
                         News</span>
                 </a>
@@ -42,15 +42,13 @@
                 </button>
                 <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                     <ul
-                        class="flex flex-col p-4 mt-4  rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
+                        class="flex flex-col p-4 mt-4  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
                         <li>
-                            <a href="#"
-                                class="block py-2 pr-4 pl-3 text-teal-600 font-bold rounded md:bg-transparent  md:p-0"
+                            <a href="#" class="block  pr-4 text-lg pl-3 text-teal-700 md:p-0"
                                 aria-current="page">Home</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 pr-4 pl-3 hover:text-teal-600  rounded font-bold md:bg-transparent md:p-0"
+                            <a href="#" class="block py-2 pr-4 pl-3 text-lg hover:text-teal-700 md:p-0"
                                 aria-current="page">Blog</a>
                         </li>
 
@@ -65,6 +63,24 @@
         </nav>
         <!-- navbar end -->
 
+
+        <!-- News Thumbnail start -->
+        <section class=" w-11/12 mx-auto">
+            <div class="">
+                <ul class="flex justify-between items-center p-2 mt-2 " id="newsThumbnail">
+                    <!-- item dinamically add -->
+                </ul>
+            </div>
+        </section>
+        <!-- News Thumbnail end -->
+
+
+        <!-- news counter start -->
+        <section>
+
+        </section>
+        <!-- news counter end -->
+
     </header>
     <!-- ----------------------------header end --------------------------------->
 
@@ -72,6 +88,9 @@
 
     <!-- tailwind componant CDN -->
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+
+    <!-- javaScript link -->
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

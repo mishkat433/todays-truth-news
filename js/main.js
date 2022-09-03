@@ -21,8 +21,9 @@ const newsThumbnail = (tnumbnails) => {
         aria-current="page" id=${element.category_id}>${element.category_name}</a>
         `;
 
-        // find thumbnail
         findNewsThumbnail.appendChild(li)
+
+        // find thumbnail
         findElement(`${element.category_id}`).addEventListener("click", (e) => {
             newsLoader(e.target.id, e.target.innerText);
             spinner(true);
@@ -52,9 +53,10 @@ const displayAllNews = (cartItems, category) => {
     findElement("dataCount").innerText = cartItems.length !== 0 || category ? `${cartItems.length} items found for ${category} category` : "news not found";
     spinner(false)
 
-    // const arr = []
-    // cartItems.filter(i => i.total_view > arr.push(i.total_view))
-    // console.log(arr);
+
+    cartItems.sort((a, b) => {
+        return b.total_view - a.total_view
+    })
 
     const allNews = findElement("allNews");
     allNews.innerHTML = '';
@@ -62,7 +64,7 @@ const displayAllNews = (cartItems, category) => {
     if (cartItems.length !== 0) {
         cartItems.forEach(items => {
             const div = document.createElement("div");
-            console.log(items);
+
 
             div.classList.add('flex', 'flex-col', 'justify-left', 'items-center', 'w-full', 'bg-teal-100', 'rounded-lg', 'border', 'shadow-md', 'md:flex-row', 'mb-5', 'gap-5')
             div.innerHTML = `

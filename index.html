@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Today's truth news</title>
+    <link rel="shortcut icon" href="./images/logo.jpg" type="image/x-icon">
 
     <!-- tailwind componant link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
@@ -153,12 +154,30 @@
                     <img w-full src="" alt="" id="image">
                     <h3 class="font-bold text-lg" id="newsTitle"> </h3>
                     <p class="py-4 text-justify" id="newsDetails"></p>
+                    <hr class="bg-teal-500 my-5">
+                    <div class="flex flex-wrap justify-between items-center mt-5">
+                        <div class="flex flex-col items-center">
+                            <img class="w-12 rounded-full mr-3" src="" alt="" id="authorImg">
+                            <div class="text-center">
+                                <h4 class=" font-semibold" id="authorName">
+                                </h4>
+                                <p class="" id="newsDate"></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-regular fa-eye "></i>
+                            <p id="viwes"></p>
+                        </div>
+                        <div class="text-yellow-500">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-black" id="rating"></span>
+                        </div>
+                    </div>
                     <div class="modal-action">
                         <label for="my-modal"
                             class="bg-teal-500 cursor-pointer rounded-lg py-3 px-4 text-white">Close</label>
                     </div>
                 </div>
-            </div>
         </section>
         <!-- fullview with modal end-->
 
@@ -172,7 +191,6 @@
         <h4 class="text-teal-700 text-center">Copyright 2022 Today's truth news</h4>
     </footer>
     <!-- footer end -->
-
 
 
     <!-- tailwind componant CDN -->

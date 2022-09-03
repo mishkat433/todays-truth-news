@@ -15,7 +15,7 @@ const newsThumbnail = (tnumbnails) => {
 
     const findNewsThumbnail = findElement("newsThumbnail");
     tnumbnails.forEach(element => {
-        const li = document.createElement("li")
+        const li = document.createElement("li");
         li.innerHTML = `
         <a href="#" class="block py-2 pr-4 pl-3 text-gray-500 hover:text-white hover:bg-teal-300 text-lg rounded md:bg-transparent "
         aria-current="page" id=${element.category_id}>${element.category_name}</a>`;
@@ -127,9 +127,16 @@ const newsDetails = (detailsId) => {
 const displayNewsDetails = (details) => {
     console.log(details);
     findElement("image").setAttribute("src", details.image_url);
-    findElement("newsTitle").innerText = details.title ? details.title : "not found";
-    findElement("newsDetails").innerText = details.details ? details.details : "not found";
+    findElement("authorImg").setAttribute("src", details.author.img);
+
+    setElement(findElement("newsTitle"), details.title);
+    setElement(findElement("newsDetails"), details.details);
+    setElement(findElement("authorName"), details.author.name);
+    setElement(findElement("newsDate"), details.author.published_date);
+    setElement(findElement("viwes"), details.total_view);
+    setElement(findElement("rating"), details.rating.number);
 }
+
 
 
 
@@ -150,4 +157,8 @@ const spinner = (condition) => {
 const findElement = (elementId) => {
     const element = document.getElementById(elementId);
     return element
+}
+
+const setElement = (element, data) => {
+    element.innerText = data ? data : "not found";
 }

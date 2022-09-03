@@ -108,7 +108,7 @@ const displayAllNews = (cartItems, category) => {
         allNews.appendChild(p);
     }
 }
-newsLoader("08");
+newsLoader("08", "All News");
 
 
 

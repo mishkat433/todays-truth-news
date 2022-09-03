@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's truth news</title>
+
+    <!-- Tailwind link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind componant link -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+</head>
+
+<body class="scroll-smooth bg-gray-100">
+
+    <!------------------------------- header start ----------------------------------->
+    <header class="">
+        <!-- navbar start -->
+        <nav class="py-2 sm:px-4  rounded bg-teal-100 border-b-2 border-teal-200">
+            <div class="container flex flex-wrap justify-between items-center w-11/12 mx-auto ">
+                <a href="/index.html" class="flex items-center">
+                    <span class="self-center text-3xl font-bold whitespace-nowrap font-['Oswald'] text-teal-700">Today's
+                        Truth
+                        News</span>
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 ml-3 text-sm text-teal-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="flex flex-col p-4 mt-4  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
+                        <li>
+                            <a href="/index.html" class="block  pr-4 text-lg pl-3 text-gray-500  md:p-0"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="/blog.html"
+                                class="block py-2 pr-4 pl-3 text-lg text-teal-700 hover:text-teal-700 md:p-0"
+                                aria-current="page">Blog</a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 w-12  md:hover:bg-transparent overflow-hidden md:border-0  md:p-0 "><img
+                                    src=" " class="mr-3 h-6 sm:h-9 bg-slate-400 rounded-full" alt="Flowbite Logo"
+                                    id="navImage"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+    </header>
+    <!-- ----------------------------header end --------------------------------->
+
+
+
+    <!-- ----------------------------main end --------------------------------->
+    <main class="w-11/12 mx-auto mt-5 ">
+        <h1 class="text-center text-2xl mb-5 font-semibold">Common Question</h1>
+        <!-- ask question start -->
+        <section>
+            <div id="accordion-color" data-accordion="collapse"
+                data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white">
+                <h2 id="accordion-color-heading-1">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium text-left border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200  hover:bg-blue-100  "
+                        data-accordion-target="#accordion-color-body-1" aria-expanded="true"
+                        aria-controls="accordion-color-body-1">
+                        <span>What is difference between var, let, const?</span>
+                        <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-color-body-1" class="" aria-labelledby="accordion-color-heading-1">
+                    <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+
+                        <p class="mb-2 text-gray-600"><strong>Var : </strong> The scope of a var
+                            variable is functional scope. It can be updated
+                            and re-declared into the scope. It can be declared
+                            without initialization.</p>
+
+
+                        <p class="mb-2 text-gray-600"> <strong>Let : </strong> The scope of a let
+                            variable is block
+                            scope. It can be updated but cannot be
+                            re-declared into the scope. It can be declared without initialization.</p>
+                        </p>
+                        <p class="mb-2 text-gray-600"> <strong>Const : </strong> The scope of a const
+                            variable is block scope. It cannot be updated or re-declared into the scope. It cannot be
+                            declared without initialization.</p>
+                        </p>
+                    </div>
+                </div>
+
+                <h2 id="accordion-color-heading-2">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 "
+                        data-accordion-target="#accordion-color-body-2" aria-expanded="false"
+                        aria-controls="accordion-color-body-2">
+                        <span>Wtha is the Difference Between Regular Functions and Arrow Functions?</span>
+                        <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
+                    <div class="p-5 font-light border border-b-0 border-gray-200">
+                        <p class="mb-2 text-gray-600"><strong>Regular Function : </strong>Inside of a
+                            regular JavaScript function, this value (aka the execution context) is dynamic.
+
+                            The dynamic context means that the value of this depends on how the function is invoked. In
+                            JavaScript, there are 4 ways you can invoke a regular function.</p>
+                        <p class="mb-2 text-gray-600"><strong>Arrow Function : </strong>The behavior
+                            of this inside of an arrow function differs considerably from the regular function's this
+                            behavior. The arrow function doesn't define its own execution context.
+
+                            No matter how or where being executed, this value inside of an arrow function always equals
+                            this value from the outer function. In other words, the arrow function resolves this
+                            lexically.</p>
+
+                    </div>
+                </div>
+
+                <h2 id="accordion-color-heading-3">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 "
+                        data-accordion-target="#accordion-color-body-3" aria-expanded="false"
+                        aria-controls="accordion-color-body-3">
+                        <span>What are the differences between map, forEach, filter, find?</span>
+                        <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
+                    <div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-600 dark:text-gray-400"><strong>Map : </strong>.map() executes the same
+                            code on every element in an array and returns a new array with the updated elements.</p>
+                        <p class="mb-2 text-gray-600 dark:text-gray-400"><strong>ForEact : </strong>.forEach(), is used
+                            to execute the same code on every element in an array but does not change the array and it
+                            returns undefined.</p>
+                        <p class="mb-2 text-gray-600 dark:text-gray-400"><strong>Filter : </strong>.filter() checks
+                            every element in an array to see if it meets a certain criteria and returns a new array with
+                            the elements that return truthy for the criteria.</p>
+                        <p class="mb-2 text-gray-600 dark:text-gray-400"><strong>Find : </strong>.find() When you want
+                            to select a single element from an array.</p>
+
+                    </div>
+                </div>
+
+                <h2 id="accordion-color-heading-4">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 "
+                        data-accordion-target="#accordion-color-body-4" aria-expanded="false"
+                        aria-controls="accordion-color-body-3">
+                        <span>Why you use templateString?</span>
+                        <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-4">
+                    <div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-600 dark:text-gray-400"><strong>Summary : </strong> in this tutorial,
+                            you will learn about
+                            JavaScript template literal, which allows you to work with a string template more easily.
+
+                            Before ES6, you use single quotes (') or double quotes (") to wrap a string literal. And the
+                            strings have very limited functionality.
+
+                            To enable you to solve more complex problems, ES6 template literals provide the syntax that
+                            allows you to work with strings more safely and cleanly.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- ask question end -->
+    </main>
+    <!-- ----------------------------main end --------------------------------->
+
+
+    <!-- ----------------------------  footer start --------------------------------->
+    <footer class="py-4 bg-teal-100 mt-10">
+        <h4 class="text-teal-700 text-center">Copyright 2022 Today's truth news</h4>
+    </footer>
+    <!-- -----------------------------  main end ------------------------------------->
+
+
+
+    <!-- tailwind componant CDN -->
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/4b8002a548.js" crossorigin="anonymous"></script>
+
+    <!-- javaScript link -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

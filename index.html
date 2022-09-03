@@ -16,19 +16,11 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <style>
-        .active {
-            background-color: teal;
-            color: white;
-        }
-    </style>
-
-
 </head>
 
-<body class="scroll-smooth bg-gray-100">
+<body class="scroll-smooth bg-teal-50">
 
-    <!------------------------------- header start ----------------------------------->
+    <!---header start --->
     <header class="">
         <!-- navbar start -->
         <nav class="py-2 sm:px-4  rounded bg-teal-100 border-b-2 border-teal-200">
@@ -77,7 +69,7 @@
         <!-- News Thumbnail start -->
         <section class=" w-11/12 mx-auto my-3">
             <div class="">
-                <ul class="flex justify-between items-center p-2 mt-2 " id="newsThumbnail">
+                <ul class="flex justify-between flex-col lg:flex-row items-center p-2 mt-2 " id="newsThumbnail">
                     <!-- item dinamically add -->
                 </ul>
             </div>
@@ -86,31 +78,31 @@
 
 
         <!-- news counter start -->
-        <section class="w-5/12 mx-auto">
+        <section class="w-11/12 lg:w-5/12 mx-auto">
             <h4 class="bg-white p-4 rounded-lg text-lg text-center " id="dataCount"> </h4>
         </section>
         <!-- news counter end -->
 
     </header>
-    <!-- ---------------------------- header end --------------------------------->
+    <!-- header end --->
 
 
 
-    <!------------------------------ main end --------------------------------->
+    <!--- main section start --->
     <main class="w-11/12 mx-auto mt-5">
+
         <!-- main top start -->
-        <section class="flex justify-between items-center my-10">
+        <section class="flex justify-between items-center flex-wrap  my-10">
             <div class="flex  items-center ">
                 <p>Sorte by : </p>
                 <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-40 p-2 ml-2">
                     <option selected="default">Default</option>
                     <option value="US">Top views</option>
-
                 </select>
             </div>
-            <div class="flex gap-4">
+            <div class="flex gap-4 my-2">
                 <button
-                    class="bg-teal-500 px-3 py-2 rounded-lg text-white  hover:border-2 hover:border-teal-500 hover:bg-white hover:text-teal-700 transition duration-4000">Today's
+                    class="bg-teal-500 px-3 py-2 rounded-lg text-white border-2  hover:border-2 hover:border-teal-500 hover:bg-white hover:text-teal-700 transition duration-4000">Today's
                     Pic</button>
                 <button
                     class="border-2 border-teal-500 px-3 py-2 rounded-lg text-teal-700 hover:bg-teal-500 hover:text-white transition duration-4000">Trending</button>
@@ -119,7 +111,7 @@
         <!-- main top end -->
 
 
-        <!-- spinner -->
+        <!-- spinner start-->
         <section>
             <div class="text-center hidden my-5" id="spinner">
                 <div role="status">
@@ -136,6 +128,7 @@
                 </div>
             </div>
         </section>
+        <!-- spinner end-->
 
 
         <!-- news cart start -->
@@ -146,14 +139,16 @@
         </section>
         <!-- news cart end -->
 
-        <!-- fullview with modal start -->
 
+        <!-- fullview with modal start -->
         <section id="detailsNews">
             <!-- fullview with modal start-->
-
             <input type="checkbox" id="my-modal" class="modal-toggle" />
             <div class="modal">
                 <div class="modal-box">
+                    <div class="modal-action mt-0">
+                        <label for="my-modal" class=" cursor-pointer mb-3 ">X</label>
+                    </div>
                     <img w-full src="" alt="" id="image">
                     <h3 class="font-bold text-lg" id="newsTitle"> </h3>
                     <p class="py-4 text-justify" id="newsDetails"></p>
@@ -163,18 +158,19 @@
                     </div>
                 </div>
             </div>
-            <!-- fullview with modal end-->
         </section>
+        <!-- fullview with modal end-->
+
     </main>
-    <!-- ----------------------------main end --------------------------------->
+    <!--main end -->
 
 
 
-    <!-- ----------------------------  footer start --------------------------------->
+    <!-- footer start ---->
     <footer class="py-4 bg-teal-100 mt-10">
         <h4 class="text-teal-700 text-center">Copyright 2022 Today's truth news</h4>
     </footer>
-    <!-- -----------------------------  main end ------------------------------------->
+    <!-- footer end -->
 
 
 
@@ -182,7 +178,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 
-    <!-- font awesome -->
+    <!-- font awesome CDN-->
     <script src="https://kit.fontawesome.com/4b8002a548.js" crossorigin="anonymous"></script>
 
     <!-- javaScript link -->

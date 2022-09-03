@@ -1,4 +1,4 @@
-// thumbnail load
+// news thumbnail load
 fetch("https://openapi.programming-hero.com/api/news/categories")
     .then(res => res.json())
     .then(thumbnails => {
@@ -10,18 +10,17 @@ fetch("https://openapi.programming-hero.com/api/news/categories")
 
 
 
-// thumbnail item add
+// news thumbnail item add
 const newsThumbnail = (tnumbnails) => {
 
-    const findNewsThumbnail = findElement("newsThumbnail")
+    const findNewsThumbnail = findElement("newsThumbnail");
     tnumbnails.forEach(element => {
         const li = document.createElement("li")
         li.innerHTML = `
         <a href="#" class="block py-2 pr-4 pl-3 text-gray-500 hover:text-white hover:bg-teal-300 text-lg rounded md:bg-transparent "
-        aria-current="page" id=${element.category_id}>${element.category_name}</a>
-        `;
+        aria-current="page" id=${element.category_id}>${element.category_name}</a>`;
 
-        findNewsThumbnail.appendChild(li)
+        findNewsThumbnail.appendChild(li);
 
         // find thumbnail
         findElement(`${element.category_id}`).addEventListener("click", (e) => {
@@ -50,21 +49,23 @@ const newsLoader = async (id, category) => {
 // display news
 const displayAllNews = (cartItems, category) => {
 
+    // display news count
     findElement("dataCount").innerText = cartItems.length !== 0 || category ? `${cartItems.length} items found for ${category} category` : "news not found";
-    spinner(false)
 
+    spinner(false);
 
+    // sort by top views
     cartItems.sort((a, b) => {
-        return b.total_view - a.total_view
+        return b.total_view - a.total_view;
     })
 
     const allNews = findElement("allNews");
+
     allNews.innerHTML = '';
 
     if (cartItems.length !== 0) {
         cartItems.forEach(items => {
             const div = document.createElement("div");
-
 
             div.classList.add('flex', 'flex-col', 'justify-left', 'items-center', 'w-full', 'bg-teal-100', 'rounded-lg', 'border', 'shadow-md', 'md:flex-row', 'mb-5', 'gap-5')
             div.innerHTML = `
@@ -72,8 +73,7 @@ const displayAllNews = (cartItems, category) => {
             <label for="my-modal" class="cursor-pointer" onclick=newsDetails('${items._id}')>
                 <div class="flex flex-col justify-between p-4 leading-normal" >
             <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900">${items.title ? items.title : "no data found"}</h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${items.details ? `${items.details.slice(0, 400)}...` : "not found"
-                }</p >
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${items.details ? `${items.details.slice(0, 400)}...` : "not found"}</p >
         
         <div class="flex flex-wrap justify-between items-center mt-5">
             <div class="flex items-center">
@@ -95,11 +95,10 @@ const displayAllNews = (cartItems, category) => {
                 <i class="fa-solid fa-arrow-right-long font-2xl text-teal-700"></i>
             </div>
         </div>
-        </ >
         </label >
         `
-            allNews.appendChild(div)
-            findElement("navImage").setAttribute("src", `${items.author.img}`)
+            allNews.appendChild(div);
+            findElement("navImage").setAttribute("src", `${items.author.img}`);
         });
     }
     else {
@@ -109,18 +108,18 @@ const displayAllNews = (cartItems, category) => {
         allNews.appendChild(p);
     }
 }
-newsLoader("08")
+newsLoader("08");
 
 
 
 // details news load
-const newsDetails = (id) => {
-    fetch(`https://openapi.programming-hero.com/api/news/${id}`)
+const newsDetails = (detailsId) => {
+    fetch(`https://openapi.programming-hero.com/api/news/${detailsId}`)
         .then(res => res.json())
         .then(findNews => displayNewsDetails(findNews.data[0]))
         .catch(err => {
             err.message
-        })
+        });
 }
 
 
@@ -130,9 +129,7 @@ const displayNewsDetails = (details) => {
     findElement("image").setAttribute("src", details.image_url);
     findElement("newsTitle").innerText = details.title ? details.title : "not found";
     findElement("newsDetails").innerText = details.details ? details.details : "not found";
-
 }
-
 
 
 
